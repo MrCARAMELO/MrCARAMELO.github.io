@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Kennedy Gabriel - Técnico de Suporte Informático" />
+  <meta name="author" content="Kennedy Orlando Jose Gabriel">
+  <title>Kennedy Gabriel</title>
+  <link rel="icon" type="image/x-icon" href="Images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
+</head>
+
+<body>
+
+  <!------------- Nav-Bar ------------->
+
+  <nav class="nav-bar">
+    <div class="logo">
+      <span>K</span>G<span>.</span>
+    </div>
+    <ul id="menu">
+      <li><a href="#home" class="nav-link">Inicio</a></li>
+      <li><a href="#about" class="nav-link">Sobre</a></li>
+      <li><a href="#projects" class="nav-link">Projectos</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+      <i class="fas fa-times" onclick="closemenu()"></i>
+    </ul>
+    <i class="fas fa-bars" onclick="openmenu()"></i>
+  </nav>
+
+  <!------------- Section: Home (start) ------------->
+
+  <section id="home" class="section active-section">
+    <div class="container">
+      <div class="row">
+        <div class="home-text">
+          <p class="my-occupation">Técnico de <span>Suporte Informático</span></p>
+          <h2>Olá, chamo-me<br><span>Kennedy</span> Gabriel</h2>
+          <a href="#contact" class="btn" onclick="showSection('contact'); return false;">Contacte-me</a>
+        </div>
+        <div>
+          <img src="Images/IMG_20250621_075603.jpg" class="home-img" alt="Foto de Kennedy Gabriel">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- Section: Home (end) ------------->
+
+  <!------------- Section: About Me (start) ------------->
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="Images/about me.jpg" alt="Foto de Kennedy Gabriel" />
+        </div>
+        <div class="about-col-2">
+          <h2 class="about-subtitle">Sobre Mim</h2>
+          <p class="about-text">
+            Sou o Kennedy Orlando Jose Gabriel, jovem moçambicano e estudante do Instituto de Transportes e Comunicações (ITC), onde frequento o curso de Suporte Informático. Tenho um forte interesse em manutenção de sistemas, administração de redes e implementação de soluções tecnológicas eficazes. Acredito na aprendizagem contínua e na execução responsável das tarefas, e busco contribuir em ambientes profissionais que valorizem rigor, eficiência e inovação.
+          </p>
+          <br>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
+            <p class="tab-links" onclick="opentab('school')">Formação Acadêmica</p>
+            <p class="tab-links" onclick="opentab('languages')">Idiomas</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Desenvolvedor Front-End</span>Criação de web sites usando HTML, CSS e Java Script.</li>
+              <li><span>Redes</span>Configuração básica de roteadores e switches</li>
+              <li><span>Suporte Técnico</span>Diagnóstico e reparo de hardware/software</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="languages">
+            <ul>
+              <li>
+                <p><span>Português</span></p>
+                <p>Língua materna</p>
+              </li>
+              <li>
+                <p><span>Inglês</span></p>
+                <p>Leitura / Escrita: Nível Avançado</p>
+                <p>Fala: Nível Intermediário</p>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="school">
+            <ul>
+              <li>
+                <p><span>Instituto de Transportes e Comunicações (ITC)</span></p>
+                <p>Técnico de Suporte Informático (CV4)</p>
+                <p>2025 (em curso)</p>
+              </li>
+              <li>
+                <p><span>Instituto de Transportes e Comunicações (ITC)</span></p>
+                <p>Técnico de Eletricidade Industrial (CV3)</p>
+                <p>2024</p>
+              </li>
+              <li>
+                <p><span>Escola Comunitária Nossa Senhora das Vitórias</span></p>
+                <p>Ensino Secundário Geral</p>
+                <p>2021 – 2023</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- Section: About Me (end) ------------->
+
+  <!------------- Section: Projects (start) ------------->
+
+  <section id="projects" class="section">
+    <div class="container"><br><br>
+      <h2 class="projects-subtitle">Meus projectos</h2>
+      <div class="work-list">
+        <div class="work">
+          <img src="Images/work-1.png" alt="Bilhete de Identidade">
+          <div class="layer">
+            <h3>Bilhete de Identidade</h3>
+            <p>Cartão de Identidade baseado no meu BI.</p>
+            <a href="BI/index.html" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="Images/work-2.png" alt="Projecto de Rede">
+          <div class="layer">
+            <h3>Projecto de Rede</h3>
+            <p>Projecto de Rede Local, incluindo escolha de Tecnologia, elaboração de Diagramas e de Orçamento.</p>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="Images/work-3.png" alt="Stephen Curry Fan Zone">
+          <div class="layer">
+            <h3>Stephen Curry Fan Zone</h3>
+            <p>Site feito com Google Sites.</p>
+            <a href="https://sites.google.com/view/stephcurryfanzone" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- Section: Projects (end) ------------->
+
+  <!------------- Section: Contact (start) ------------->
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h2 class="contact-subtitle">Contacte-me</h2>
+          <p><i class="fa-regular fa-envelope"></i>kennedy.gabriel0000@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i>+258 860651226</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/16aufAZeBj/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/___mr_caramelo___?igsh=emtpdm93cDZnejhx" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/qr/XEXN7VQR7D6UP1" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/seu-usuario" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="documents/CV_KennedyGabriel.pdf" download class="btn">Baixar CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Seu Nome" required />
+            <input type="email" name="Email" placeholder="Seu Email" required />
+            <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
+            <button type="submit">Submeter</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- Section: Contact (end) ------------->
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
