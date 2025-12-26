@@ -274,7 +274,6 @@ nav ul li a.active::after {
 .tab-contents ul li span {
     color: hsl(325, 100%, 50%);
     font-size: 16px;
-    font-weight: bold;
     display: block;
     margin-bottom: 4px;
 }
@@ -608,5 +607,4 @@ nav .fas{
     .social-icons a {
         margin: 0 10px;
     }
-
 }
