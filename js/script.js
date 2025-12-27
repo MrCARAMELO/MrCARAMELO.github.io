@@ -38,7 +38,7 @@ themeToggle?.addEventListener('click', () => {
 function updateThemeIcon(theme) {
   const icon = themeToggle?.querySelector('i');
   if (icon) {
-    icon.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+    icon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
   }
 }
 
@@ -160,4 +160,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial section (no animation)
   showSection('home', false);
+
 });
