@@ -1,4 +1,4 @@
-/* ============= VARIABLES ============= */
+/* ------------ Variables ------------ */
 :root {
   --bg-color: #000;
   --text-color: #fff;
@@ -19,9 +19,9 @@
 /* Accent overrides */
 .accent-blue { --accent-color: hsl(210, 100%, 60%); }
 .accent-green { --accent-color: hsl(140, 80%, 50%); }
-.accent-orange { --accent-color: hsl(25, 90%, 60%); }
+.accent-orange { --accent-color: hsl(51, 100%, 50%); }
 
-/* ============= RESET & GLOBAL ============= */
+/* ------------ Global Styles ------------ */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* ============= NavBar ============= */
+/* ------------ NavBar ------------ */
 .nav-bar {
   background-color: var(--bg-color);
   position: fixed;
@@ -82,6 +82,7 @@ body {
 .nav-btn {
   width: 36px;
   height: 36px;
+  font-size: 20px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid var(--accent-color);
@@ -134,7 +135,7 @@ nav ul li a.active::after {
   width: 100%;
 }
 
-/* ============= SECTIONS ============= */
+/* ------------ Sections ------------ */
 .section {
   display: none;
   opacity: 0;
@@ -148,7 +149,7 @@ nav ul li a.active::after {
   transform: translateY(0);
 }
 
-/* ============= HOME ============= */
+/* ------------ Home ------------ */
 #home {
   width: 100%;
   background-size: cover;
@@ -170,6 +171,26 @@ nav ul li a.active::after {
 
 .my-occupation span {
   color: var(--accent-color);
+}
+
+/* Typing effect cursor */
+#typing-text::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: var(--accent-color);
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Optional: smooth transition when text changes */
+#typing-text {
+  display: inline-block;
+  min-width: 10ch; /* prevents layout shift */
+  height: 1.2em;
 }
 
 .home-text h2 {
@@ -218,7 +239,7 @@ nav ul li a.active::after {
   100% { transform: translateY(0px); }
 }
 
-/* ============= ABOUT ============= */
+/* ------------ About Me ------------ */
 #about {
   padding: 80px 0;
   color: var(--text-secondary);
@@ -239,7 +260,6 @@ nav ul li a.active::after {
   width: 100%;
   border-radius: 15px;
   display: block;
-  border: 2px solid var(--accent-color);
 }
 
 .about-col-2 {
@@ -328,7 +348,7 @@ nav ul li a.active::after {
   display: block;
 }
 
-/* ============= PROJECTS ============= */
+/* ------------ Projects ------------ */
 #projects {
   padding: 40px 0;
 }
@@ -413,7 +433,7 @@ nav ul li a.active::after {
   height: 100%;
 }
 
-/* ============= CONTACT ============= */
+/* ------------ Contact ------------ */
 #contact {
   margin-top: 20px;
   padding: 70px 0;
@@ -513,14 +533,14 @@ form textarea {
   display: block;
 }
 
-/* ============= MOBILE ============= */
+/* ------------ Mobile ------------ */
 nav .fas {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .nav-controls {
-    display: none;
+    display: flex;
   }
 
   .nav-bar {
@@ -577,26 +597,26 @@ nav .fas {
 
   .home-text {
     order: 2;
-    margin-top: 100px;
+    margin: 30px 0;
     font-size: 20px;
   }
 
   .my-occupation {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .home-text h2 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .home-img {
     order: 1;
     width: 220px;
     height: 220px;
-    margin: 150px auto 0;
+    margin: 120px auto 0;
     animation: none;
   }
-
+  
   /* About */
   .row {
     flex-direction: column;
@@ -604,14 +624,27 @@ nav .fas {
     text-align: center;
   }
 
-  .about-col-1,
-  .about-col-2 {
+  .about-col-1{
     width: 100%;
   }
 
+  .about-col-2 {
+    width: 100%;
+    margin-top: -70px;
+  }
+
   .about-col-1 img {
-    max-width: 250px;
-    margin: 0 auto 30px;
+    max-width: 200px;
+    margin: 20px auto;
+  }
+
+  .about-subtitle {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .about-text {
+    font-size: 14px;
   }
 
   .tab-titles {
@@ -620,12 +653,16 @@ nav .fas {
   }
 
   .tab-links {
-    margin: 10px;
+    margin: 0px;
   }
 
+  .tab-contents {
+    text-align: left;
+  }
+  
   /* Portfolio */
   .projects-subtitle {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .work-list {

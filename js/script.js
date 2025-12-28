@@ -1,7 +1,7 @@
 // ============= INIT =============
 let isFirstLoad = true;
 
-// ============= THEME & COLOR =============
+// ------------  Theme and Color ------------
 const body = document.body;
 const themeToggle = document.getElementById('theme-toggle');
 const colorToggle = document.getElementById('color-toggle');
@@ -57,7 +57,7 @@ function applyAccentColor(color) {
   else if (color === 'orange') body.classList.add('accent-orange');
 }
 
-// ============= SECTION NAVIGATION =============
+// ============= Section: Navigation =============
 function showSection(sectionId, animate = true) {
   const sections = document.querySelectorAll('.section');
   const targetSection = document.getElementById(sectionId);
@@ -96,7 +96,65 @@ function showSection(sectionId, animate = true) {
   }
 }
 
-// ============= TABS (About Me) =============
+// ============= Typping Effect =============
+function initTypingEffect() {
+  const texts = [
+    "Técnico de Suporte Informático",
+    "Desenvolvedor Web",
+    "Administrador de Redes",
+    "Estudante de TI"
+  ];
+
+  const typingText = document.getElementById('typing-text');
+  if (!typingText) return;
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeSpeed = 100;
+  const deleteSpeed = 50;
+  const pauseDelay = 2000;
+
+  function type() {
+    const currentText = texts[textIndex];
+    if (isDeleting) {
+      // Remove one character
+      typingText.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      // Add one character
+      typingText.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let delay = isDeleting ? deleteSpeed : typeSpeed;
+
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pause after full text
+      delay = pauseDelay;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next text
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+
+    setTimeout(type, delay);
+  }
+
+  // Start the effect
+  type();
+}
+
+// Call it when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+  // ... your existing code ...
+
+  // Initialize typing effect
+  initTypingEffect();
+});
+
+// ------------ Tabs (About Me) ------------
 window.opentab = function (tabname) {
   const tablinks = document.getElementsByClassName('tab-links');
   const tabcontents = document.getElementsByClassName('tab-contents');
@@ -109,7 +167,7 @@ window.opentab = function (tabname) {
   if (targetTab) targetTab.classList.add('active-tab');
 };
 
-// ============= MOBILE MENU =============
+// ------------ MOBILE MENU ------------
 window.openmenu = function () {
   const menu = document.getElementById('menu');
   if (menu) menu.style.right = '0';
@@ -120,7 +178,7 @@ window.closemenu = function () {
   if (menu) menu.style.right = '-250px';
 };
 
-// ============= FORM SUBMISSION =============
+// ------------ Form Submission  ------------
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwSdmCEC-xf6hQqOHkdijtEhBt90S7N06j_h9aI-AmE4FvItUvTHNyy82qU1vgmpJOvcA/exec';
 const form = document.forms['submit-to-google-sheet'];
 const msg = document.getElementById('msg');
@@ -142,7 +200,7 @@ if (form && msg) {
   });
 }
 
-// ============= DOM READY =============
+// ------------ DOM READY ------------
 document.addEventListener('DOMContentLoaded', function () {
   // Set up nav links
   document.querySelectorAll('.nav-link').forEach(link => {
@@ -160,5 +218,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial section (no animation)
   showSection('home', false);
-
 });
