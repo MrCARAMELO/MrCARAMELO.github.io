@@ -1,200 +1,464 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Kennedy Gabriel - Técnico de Suporte Informático"
+    />
+    <meta name="author" content="Kennedy Orlando Jose Gabriel" />
+    <meta
+      name="keywords"
+      content="Kennedy Gabriel, técnico de suporte informático, desenvolvedor web, junior, Maputo, Moçambique, redes, suporte técnico, portfolio"
+    />
+    <title>Kennedy Gabriel</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Kennedy Gabriel - Técnico de Suporte Informático" />
-  <meta name="author" content="Kennedy Orlando Jose Gabriel">
-  <title>Kennedy Gabriel</title>
-  <link rel="icon" type="image/x-icon" href="Images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
-</head>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.0/css/all.css"
+    />
 
-<body>
+    <!-- Schema.org Person JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kennedy Orlando José Gabriel",
+        "jobTitle": "Técnico de Suporte Informático e Desenvolvedor Web Júnior",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Maputo",
+          "addressCountry": "MZ"
+        },
+        "email": "mailto:kennedy.gabriel0000@gmail.com",
+        "telephone": "+258860651226",
+        "url": "https://SEU-DOMINIO-OU-GITHUB-PAGES",
+        "sameAs": [
+          "https://www.facebook.com/share/16aufAZeBj/",
+          "https://www.instagram.com/___mr_caramelo___",
+          "https://github.com/MrCARAMELO"
+        ]
+      }
+    </script>
+  </head>
 
-  <!------------- Nav-Bar ------------->
-  
-  <nav class="nav-bar">
-    <div class="logo">
-      <span>K</span>G<span>.</span>
-    </div>
-    <div class="nav-controls">
-      <button id="theme-toggle" class="nav-btn" title="Alternar tema claro/escuro">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-      <button id="color-toggle" class="nav-btn" title="Mudar cor de destaque">
-        <i class="fa-solid fa-palette"></i>
-      </button>
-    </div>
-    <ul id="menu">
-      <li><a href="#home" class="nav-link active">Inicio</a></li>
-      <li><a href="#about" class="nav-link">Sobre</a></li>
-      <li><a href="#projects" class="nav-link">Projectos</a></li>
-      <li><a href="#contact" class="nav-link">Contacto</a></li>
-      <i class="fas fa-times" onclick="closemenu()"></i>
-    </ul>
-    <i class="fas fa-bars" onclick="openmenu()"></i>
-  </nav>
+  <body>
+    <a href="#main-content" class="skip-link"
+      >Saltar para o conteúdo principal</a
+    >
 
-  <!------------- Section: Home (start) ------------->
-
-  <section id="home" class="section active-section">
-    <div class="container">
-      <div class="row">
-        <div class="home-text">
-          <p class="my-occupation">
-            <span id="typing-text"></span>
-          </p>
-          <h2>Olá, chamo-me<br><span>Kennedy</span> Gabriel</h2>
-          <a href="#contact" class="btn" onclick="showSection('contact'); return false;">Contacte-me</a>
+    <!------------- Header / Nav-Bar ------------->
+    <header>
+      <nav class="nav-bar">
+        <div class="logo"><span>K</span>G<span>.</span></div>
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="nav-btn"
+            title="Alternar tema claro/escuro"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button
+            id="color-toggle"
+            class="nav-btn"
+            title="Mudar cor de destaque"
+          >
+            <i class="fa-solid fa-palette"></i>
+          </button>
         </div>
-        <div>
-          <img src="Images/IMG_20250621_075603.jpg" class="home-img" alt="Foto de Kennedy Gabriel">
+        <ul id="menu">
+          <li><a href="#home" class="nav-link active">Inicio</a></li>
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#services" class="nav-link">Serviços</a></li>
+          <li><a href="#projects" class="nav-link">Projectos</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <i
+            class="fas fa-times"
+            onclick="closemenu()"
+            aria-label="Fechar menu"
+          ></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()" aria-label="Abrir menu"></i>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!------------- Section: Home (start) ------------->
+      <section id="home" class="section active-section">
+        <div class="container">
+          <div class="row">
+            <div class="home-text">
+              <p class="my-occupation">
+                <span id="typing-text"></span>
+              </p>
+              <h1>Olá, chamo-me<br /><span>Kennedy</span> Gabriel</h1>
+              <p class="home-summary">
+                Ajudo a resolver problemas de TI, desde suporte técnico e redes
+                até desenvolvimento de interfaces web simples e funcionais.
+                Actualmente à procura de oportunidades de estágio ou primeiro
+                emprego na área de TI.
+              </p>
+              <a
+                href="#contact"
+                class="btn"
+                onclick="showSection('contact'); return false;"
+                >Contacte-me</a
+              >
+            </div>
+            <div>
+              <img
+                src="Images/IMG_20250621_075603.jpg"
+                class="home-img"
+                alt="Foto de Kennedy Gabriel"
+                width="350"
+                height="350"
+              />
+            </div>
+          </div>
         </div>
+      </section>
+      <!------------- Section: Home (end) ------------->
+
+      <!------------- Section: About Me (start) ------------->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img
+                src="Images/about me.jpg"
+                alt="Kennedy Gabriel – Técnico de Suporte Informático"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-col-2">
+              <h2 class="about-subtitle">Sobre Mim</h2>
+              <p class="about-text">
+                Sou Kennedy Orlando José Gabriel, estudante de Suporte
+                Informático no Instituto de Transportes e Comunicações (ITC).
+                Tenho experiência em manutenção de sistemas, suporte a
+                utilizadores e configuração básica de redes locais. Interesso-me
+                por soluções tecnológicas simples e eficazes, com foco em
+                fiabilidade, segurança e melhoria da produtividade. Procuro
+                oportunidades de estágio ou primeiro emprego na área de TI, onde
+                possa aplicar e desenvolver estas competências.
+              </p>
+
+              <h3 class="stack-subtitle">Tecnologias</h3>
+              <ul class="tech-stack">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Packet Tracer</li>
+                <li>Windows</li>
+                <li>Linux básico</li>
+              </ul>
+
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Competências Técnicas
+                </p>
+                <p class="tab-links" onclick="opentab('school')">Formação</p>
+                <p class="tab-links" onclick="opentab('languages')">Idiomas</p>
+              </div>
+
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Desenvolvimento Front-End: </span>Criação de sites
+                    responsivos em HTML, CSS e JavaScript.
+                  </li>
+                  <li>
+                    <span>Redes:</span>Configuração básica de routers e switches
+                    em ambientes de pequena escala.
+                  </li>
+                  <li>
+                    <span>Suporte Técnico:</span>Diagnóstico e resolução de
+                    problemas de hardware e software em estações de trabalho.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="languages">
+                <ul>
+                  <li>
+                    <p><span>Português</span></p>
+                    <p>Língua materna</p>
+                  </li>
+                  <li>
+                    <p><span>Inglês</span></p>
+                    <p>Leitura / Escrita: Nível Avançado</p>
+                    <p>Fala: Nível Intermediário</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="school">
+                <ul>
+                  <li>
+                    <p>
+                      <span>Instituto de Transportes e Comunicações (ITC)</span>
+                    </p>
+                    <p>Técnico de Suporte Informático (CV4)</p>
+                    <p>2025 (em curso)</p>
+                  </li>
+                  <li>
+                    <p>
+                      <span>Instituto de Transportes e Comunicações (ITC)</span>
+                    </p>
+                    <p>Técnico de Eletricidade Industrial (CV3)</p>
+                    <p>2024</p>
+                  </li>
+                  <li>
+                    <p>
+                      <span>Escola Comunitária Nossa Senhora das Vitórias</span>
+                    </p>
+                    <p>Ensino Secundário Geral</p>
+                    <p>2021 – 2023</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- Section: About Me (end) ------------->
+
+      <!------------- Section: Services (start) ------------->
+      <section id="services" class="section">
+        <div class="container">
+          <h2 class="about-subtitle">O que eu faço</h2>
+          <div class="row">
+            <div class="service-card">
+              <h3>Suporte Técnico</h3>
+              <p>
+                Diagnóstico e reparo de hardware e software em estações de
+                trabalho e portáteis.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>Redes</h3>
+              <p>
+                Configuração básica de redes locais, roteadores e switches para
+                pequenas empresas.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>Desenvolvimento Web</h3>
+              <p>
+                Criação de landing pages e sites estáticos usando HTML, CSS e
+                JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- Section: Services (end) ------------->
+
+      <!------------- Section: Projects (start) ------------->
+      <section id="projects" class="section">
+        <div class="container">
+          <br /><br />
+          <h2 class="projects-subtitle">Meus projectos</h2>
+          <div class="work-list">
+            <div class="work">
+              <img
+                src="Images/work-1.png"
+                alt="Bilhete de Identidade"
+                loading="lazy"
+              />
+              <div class="layer">
+                <h3>Bilhete de Identidade</h3>
+                <p>
+                  Cartão de Identidade baseado no meu BI, desenvolvido com HTML
+                  e CSS.
+                </p>
+                <p class="project-tech">Tecnologias: HTML, CSS</p>
+                <div class="project-links">
+                  <a
+                    href="BI/index.html"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Abrir projecto Bilhete de Identidade"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <!-- Substituir pelo link real do repositório, se existir -->
+                  <!--
+                <a href="https://github.com/MrCARAMELO/REPO_BI"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Ver código do Bilhete de Identidade no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                --></div>
+              </div>
+            </div>
+
+            <div class="work">
+              <img
+                src="Images/work-2.png"
+                alt="Projecto de Rede"
+                loading="lazy"
+              />
+              <div class="layer">
+                <h3>Projecto de Rede</h3>
+                <p>
+                  Projecto de Rede Local, incluindo escolha de tecnologia,
+                  elaboração de diagramas e orçamento.
+                </p>
+                <p class="project-tech">
+                  Tecnologias: Packet Tracer, Redes LAN
+                </p>
+                <div class="project-links">
+                  <a href="#" aria-label="Ver detalhes do Projecto de Rede">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <!-- Link do GitHub se existir -->
+                </div>
+              </div>
+            </div>
+
+            <div class="work">
+              <img
+                src="Images/work-3.png"
+                alt="Stephen Curry Fan Zone"
+                loading="lazy"
+              />
+              <div class="layer">
+                <h3>Stephen Curry Fan Zone</h3>
+                <p>Site de fã desenvolvido com Google Sites.</p>
+                <p class="project-tech">Tecnologias: Google Sites</p>
+                <div class="project-links">
+                  <a
+                    href="https://sites.google.com/view/stephcurryfanzone"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Abrir o site Stephen Curry Fan Zone"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- Section: Projects (end) ------------->
+
+      <!------------- Section: Contact (start) ------------->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h2 class="contact-subtitle">Contacte-me</h2>
+              <p>
+                <i class="fa-regular fa-envelope" title="Email"></i
+                >kennedy.gabriel0000@gmail.com
+              </p>
+              <p><i class="fas fa-phone-square-alt" title="Numero de Telefone"></i>+258 860651226</p>
+              <div class="social-icons">
+                <a
+                  href="https://www.facebook.com/share/16aufAZeBj/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Abrir perfil do Kennedy no Facebook"
+                >
+                  <i class="fab fa-facebook" title="Facebook"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/___mr_caramelo___?igsh=emtpdm93cDZnejhx"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Abrir perfil do Kennedy no Instagram"
+                >
+                  <i class="fab fa-instagram" title="Instagram"></i>
+                </a>
+                <a
+                  href="https://wa.me/qr/XEXN7VQR7D6UP1"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Enviar mensagem para o Kennedy no WhatsApp"
+                >
+                  <i class="fa-brands fa-whatsapp" title="WhatsApp"></i>
+                </a>
+                <a
+                  href="https://github.com/MrCARAMELO"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Abrir repositórios do Kennedy no GitHub"
+                >
+                  <i class="fa-brands fa-github" title="GitHub"></i>
+                </a>
+              </div>
+              <a href="documents/CV_KennedyGabriel.pdf" download class="btn"
+                >Baixar CV</a
+              >
+            </div>
+
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <label for="name">Seu Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="Name"
+                  placeholder="Seu Nome"
+                  required
+                />
+
+                <label for="email">Seu Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  placeholder="Seu Email"
+                  required
+                />
+
+                <label for="message">Sua Mensagem</label>
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="6"
+                  placeholder="Sua Mensagem"
+                ></textarea>
+
+                <button type="submit">Submeter</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- Section: Contact (end) ------------->
+    </main>
+
+    <!------------- Footer ------------->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2025 Kennedy Orlando José Gabriel. Todos os direitos reservados.
+        </p>
+        <p>
+          <a href="mailto:kennedy.gabriel0000@gmail.com"
+            >kennedy.gabriel0000@gmail.com</a
+          >
+          ·
+          <a href="#home">Voltar ao topo</a>
+        </p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!------------- Section: Home (end) ------------->
-
-  <!------------- Section: About Me (start) ------------->
-
-  <section id="about" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="Images/about me.jpg" alt="Foto de Kennedy Gabriel" />
-        </div>
-        <div class="about-col-2">
-          <h2 class="about-subtitle">Sobre Mim</h2>
-          <p class="about-text">
-            Sou o Kennedy Orlando Jose Gabriel, jovem moçambicano e estudante do Instituto de Transportes e Comunicações (ITC), onde frequento o curso de Suporte Informático. Tenho um forte interesse em manutenção de sistemas, administração de redes e implementação de soluções tecnológicas eficazes. Acredito na aprendizagem contínua e na execução responsável das tarefas, e busco contribuir em ambientes profissionais que valorizem rigor, eficiência e inovação.
-          </p>
-          <br>
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
-            <p class="tab-links" onclick="opentab('school')">Formação Acadêmica</p>
-            <p class="tab-links" onclick="opentab('languages')">Idiomas</p>
-          </div>
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Desenvolvedor Front-End</span>Criação de web sites usando HTML, CSS e Java Script.</li>
-              <li><span>Redes</span>Configuração básica de roteadores e switches</li>
-              <li><span>Suporte Técnico</span>Diagnóstico e reparo de hardware/software</li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="languages">
-            <ul>
-              <li>
-                <p><span>Português</span></p>
-                <p>Língua materna</p>
-              </li>
-              <li>
-                <p><span>Inglês</span></p>
-                <p>Leitura / Escrita: Nível Avançado</p>
-                <p>Fala: Nível Intermediário</p>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="school">
-            <ul>
-              <li>
-                <p><span>Instituto de Transportes e Comunicações (ITC)</span></p>
-                <p>Técnico de Suporte Informático (CV4)</p>
-                <p>2025 (em curso)</p>
-              </li>
-              <li>
-                <p><span>Instituto de Transportes e Comunicações (ITC)</span></p>
-                <p>Técnico de Eletricidade Industrial (CV3)</p>
-                <p>2024</p>
-              </li>
-              <li>
-                <p><span>Escola Comunitária Nossa Senhora das Vitórias</span></p>
-                <p>Ensino Secundário Geral</p>
-                <p>2021 – 2023</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!------------- Section: About Me (end) ------------->
-
-  <!------------- Section: Projects (start) ------------->
-
-  <section id="projects" class="section">
-    <div class="container"><br><br>
-      <h2 class="projects-subtitle">Meus projectos</h2>
-      <div class="work-list">
-        <div class="work">
-          <img src="Images/work-1.png" alt="Bilhete de Identidade">
-          <div class="layer">
-            <h3>Bilhete de Identidade</h3>
-            <p>Cartão de Identidade baseado no meu BI.</p>
-            <a href="BI/index.html" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="work">
-          <img src="Images/work-2.png" alt="Projecto de Rede">
-          <div class="layer">
-            <h3>Projecto de Rede</h3>
-            <p>Projecto de Rede Local, incluindo escolha de Tecnologia, elaboração de Diagramas e de Orçamento.</p>
-            <a href="#"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="work">
-          <img src="Images/work-3.png" alt="Stephen Curry Fan Zone">
-          <div class="layer">
-            <h3>Stephen Curry Fan Zone</h3>
-            <p>Site feito com Google Sites.</p>
-            <a href="https://sites.google.com/view/stephcurryfanzone" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!------------- Section: Projects (end) ------------->
-
-  <!------------- Section: Contact (start) ------------->
-
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="contact-left">
-          <h2 class="contact-subtitle">Contacte-me</h2>
-          <p><i class="fa-regular fa-envelope"></i>kennedy.gabriel0000@gmail.com</p>
-          <p><i class="fas fa-phone-square-alt"></i>+258 860651226</p>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/share/16aufAZeBj/" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/___mr_caramelo___?igsh=emtpdm93cDZnejhx" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/qr/XEXN7VQR7D6UP1" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://github.com/MrCARAMELO" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-          </div>
-          <a href="documents/CV_KennedyGabriel.pdf" download class="btn">Baixar CV</a>
-        </div>
-        <div class="contact-right">
-          <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Seu Nome" required />
-            <input type="email" name="Email" placeholder="Seu Email" required />
-            <textarea name="Message" rows="6" placeholder="Sua Mensagem"></textarea>
-            <button type="submit">Submeter</button>
-          </form>
-          <span id="msg"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!------------- Section: Contact (end) ------------->
-  
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

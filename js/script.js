@@ -96,13 +96,11 @@ function showSection(sectionId, animate = true) {
   }
 }
 
-// ============= Typping Effect =============
+// ============= Typing Effect =============
 function initTypingEffect() {
   const texts = [
     "Técnico de Suporte Informático",
-    "Desenvolvedor Web",
-    "Administrador de Redes",
-    "Estudante de TI"
+    "Desenvolvedor Web Júnior em Maputo",
   ];
 
   const typingText = document.getElementById('typing-text');
@@ -118,11 +116,9 @@ function initTypingEffect() {
   function type() {
     const currentText = texts[textIndex];
     if (isDeleting) {
-      // Remove one character
       typingText.textContent = currentText.substring(0, charIndex - 1);
       charIndex--;
     } else {
-      // Add one character
       typingText.textContent = currentText.substring(0, charIndex + 1);
       charIndex++;
     }
@@ -130,11 +126,9 @@ function initTypingEffect() {
     let delay = isDeleting ? deleteSpeed : typeSpeed;
 
     if (!isDeleting && charIndex === currentText.length) {
-      // Pause after full text
       delay = pauseDelay;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
-      // Move to next text
       isDeleting = false;
       textIndex = (textIndex + 1) % texts.length;
     }
@@ -142,17 +136,8 @@ function initTypingEffect() {
     setTimeout(type, delay);
   }
 
-  // Start the effect
   type();
 }
-
-// Call it when the page loads
-document.addEventListener('DOMContentLoaded', function () {
-  // ... your existing code ...
-
-  // Initialize typing effect
-  initTypingEffect();
-});
 
 // ------------ Tabs (About Me) ------------
 window.opentab = function (tabname) {
@@ -160,7 +145,7 @@ window.opentab = function (tabname) {
   const tabcontents = document.getElementsByClassName('tab-contents');
 
   for (let tablink of tablinks) tablink.classList.remove('active-link');
-  for ( let tabcontent of tabcontents) tabcontent.classList.remove('active-tab');
+  for (let tabcontent of tabcontents) tabcontent.classList.remove('active-tab');
 
   event.currentTarget.classList.add('active-link');
   const targetTab = document.getElementById(tabname);
@@ -218,4 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial section (no animation)
   showSection('home', false);
+
+  // Initialize typing effect
+  initTypingEffect();
 });
