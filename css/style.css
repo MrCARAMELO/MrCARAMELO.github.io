@@ -686,6 +686,12 @@ nav .fas {
     font-size: 40px;
   }
 
+  .btn,
+  .nav-btn,
+  #contact button {
+    transition: none;
+  }
+
   nav .fas {
     display: block;
     font-size: 25px;
@@ -722,7 +728,7 @@ nav .fas {
   nav ul li a::after {
     background: var(--bg-color);
   }
-
+  
   /* Home */
   #home .row {
     flex-direction: column;
@@ -838,6 +844,8 @@ nav .fas {
   }
 
   .social-icons a {
+    color: var(--accent-color);
     margin: 0 10px;
+    transition: none;
   }
 }
