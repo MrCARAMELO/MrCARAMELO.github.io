@@ -686,12 +686,6 @@ nav .fas {
     font-size: 40px;
   }
 
-  .btn,
-  .nav-btn,
-  #contact button {
-    transition: none;
-  }
-
   nav .fas {
     display: block;
     font-size: 25px;
@@ -846,6 +840,6 @@ nav .fas {
   .social-icons a {
     color: var(--accent-color);
     margin: 0 10px;
-    transition: none;
   }
+  
 }
